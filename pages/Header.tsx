@@ -3,8 +3,17 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Navlinks from "./Navlinks";
 import SearchBox from "./SearchBox";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+import DarkModeButton from "./DarkModeButton";
 
 export default function Header() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
   return (
     <header>
       {/* A navbar with 3 column layout= [menubar][Name][darkmode button] */}
@@ -19,8 +28,9 @@ export default function Header() {
             Post
           </h1>
         </Link>
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end space-x-2">
           {/* Dark mode button */}
+          <DarkModeButton />
           <button className="hidden md:inline bg-slate-900 text-white px-4 lg:px-8 py-2 lg:py-4 rounded-full dark:bg-slate-800">
             Subscribe Now
           </button>

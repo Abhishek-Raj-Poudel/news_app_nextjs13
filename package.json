@@ -7,9 +7,15 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
     "next": "latest",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "stepzen": "^0.25.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
