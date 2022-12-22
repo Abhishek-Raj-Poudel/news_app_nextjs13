@@ -1,10 +1,11 @@
 import React from "react";
+import ReadMoreButton from "./ReadMoreButton";
 
 type Props = {
   article: Article;
 };
 
-function Article({ article }: Props) {
+function ArticleCard({ article }: Props) {
   return (
     <article className="bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out">
       {article.image && (
@@ -28,9 +29,11 @@ function Article({ article }: Props) {
             <p>{article.published_at}</p>
           </footer>
         </div>
+        {/* Read More Button */}
+        <ReadMoreButton article={article} />
       </div>
     </article>
   );
 }
 
-export default Article;
+export default ArticleCard;
