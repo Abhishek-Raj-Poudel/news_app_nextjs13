@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Error from "next/error";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import LiveTimeStamp from "../LiveTimeStamp";
 
 type Props = {
   searchParams?: Article;
@@ -13,12 +14,11 @@ const ArticlePage: NextPage = ({ searchParams }: Props) => {
   // query will contain the query parameters from the URL
   const { query } = router;
 
-  console.log(Object.entries(query));
   if ((query && Object.entries(query).length === 0) || !query) {
     return <Error statusCode={404} />;
   }
 
-  const article: Article = query;
+  const article: any = query;
 
   return (
     <article className="max-w-6xl mx-auto">
@@ -37,7 +37,9 @@ const ArticlePage: NextPage = ({ searchParams }: Props) => {
           <div className="flex divide-x-2 space-x-4">
             <h2 className="font-bold">By - {article.author || "unknown"}</h2>
             <h2 className="font-bold pl-4">Source - {article.source}</h2>
-            <p className="pl-4">{article.published_at}</p>
+            <p className="pl-4">
+              <LiveTimeStamp time={article.published_at} />
+            </p>
           </div>
           <p className="pt-4">{article.description}</p>
         </div>

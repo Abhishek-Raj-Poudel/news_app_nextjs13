@@ -3,17 +3,9 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Navlinks from "./Navlinks";
 import SearchBox from "./SearchBox";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 import DarkModeButton from "./DarkModeButton";
 
 export default function Header() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
   return (
     <header>
       {/* A navbar with 3 column layout= [menubar][Name][darkmode button] */}
