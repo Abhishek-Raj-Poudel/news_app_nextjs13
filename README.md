@@ -25,4 +25,4 @@ You can:
 
 ### Demo Website
 
-(Demo)[https://news-app-nextjs-abhishek-raj-poudel.vercel.app/]
+[Demo}(https://news-app-nextjs-abhishek-raj-poudel.vercel.app/)
