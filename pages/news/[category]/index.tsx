@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { categories } from "../../../constants";
 import fetchNews from "../../../lib/fetchNews";
-import NewsList from "../../NewsList";
+import NewsList from "../../../components/NewsList";
 
 function NewsCategory() {
   const [news, setNews] = useState<NewsResponse | null>(null);

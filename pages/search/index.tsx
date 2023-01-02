@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import fetchNews from "../../lib/fetchNews";
-import NewsList from "../NewsList";
+import NewsList from "../../components/NewsList";
 
 function SearchPage() {
   const [news, setNews] = useState<NewsResponse | null>(null);

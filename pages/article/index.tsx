@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Error from "next/error";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import LiveTimeStamp from "../LiveTimeStamp";
+import LiveTimeStamp from "../../components/LiveTimeStamp";
 
 type Props = {
   searchParams?: Article;
